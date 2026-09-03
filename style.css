@@ -1,0 +1,122 @@
+body {
+    background-color: #0b1220;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin:0;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0% 12%;
+    align-items: flex-start;
+}
+
+.hero img{
+    width: 700px;
+    height: 250x;
+    display: block;
+    margin:0 auto 20px;
+   
+
+}
+
+.intro {
+    color:#38bdf8;
+    font-size: 50px;
+    font-weight: 700;
+    
+
+}
+
+h1 {
+     font-size: 60px;
+      margin: 10px 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin:10px 0;
+}
+
+.description {
+max-width: 650px;
+font-size: 18px;
+line-height: 1.6;
+margin-top: 10px;
+}
+
+#about{
+    padding: 80px 10%;
+    min-height: 60vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+  
+.about-content {
+    display:flex;
+    gap:50px;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 1000px;
+    width: 100%;
+}
+
+  .about-text,
+  .about-highlights {
+    flex:1;
+  }
+
+.about-highlights{
+       background-color: #121b3a;
+       padding: 30px;
+       border-radius: 15px;
+}
+
+#skills{
+    padding: 80px 10%;    
+}
+.skills-group{
+    margin-top: 50px;
+}
+
+.skills-group h3{
+    font: size 34px;;
+    font-weight: 800;
+}
+
+.skills-container{
+    display: flexbox;
+    flex-direction: row;
+    gap: 30px;
+    
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
