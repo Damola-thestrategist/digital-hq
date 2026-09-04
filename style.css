@@ -15,12 +15,12 @@ body {
 }
 
 .hero img{
-    width: 700px;
+    width: 500px;
     height: 250x;
     display: block;
-    margin:0 auto 20px;
-   
-
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
 }
 
 .intro {
@@ -39,6 +39,11 @@ h1 {
 h2 {
     font-size: 30px;
     margin:10px 0;
+}
+
+.class intro p{
+    font-size: 12;
+    padding: 12px 12px;
 }
 
 .description {
@@ -85,6 +90,27 @@ p {
        background-color: #121b3a;
        padding: 30px;
        border-radius: 15px;
+       border: 1px solid rgba(0, 0, 0, 0.15);
+       margin-top: -100px;
+       
+}
+
+.about-text p{
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.about-highlights p{
+    font-weight: 600;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.about-highlights h3{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
 }
 
 #skills{
@@ -95,17 +121,53 @@ p {
 }
 
 .skills-group h3{
-    font: size 34px;;
-    font-weight: 800;
+    font: size 34px;
+    font-weight: 200;
+    margin-bottom: 20px;
+
+    
 }
 
 .skills-container{
-    display: flexbox;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     
 }
 
+.skills-group p{
+    display:inline-block;
+    background-color: #0b1220;
+    color: #eaecf1;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 6px;
+    transition: 0.3 ease;
+}
+
+.skills-group p:hover{
+    position: relative;
+    top: -6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.hero a {
+    display:inline-block;
+    background-color: #0066ff;
+    color: white;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.hero a:hover{
+    position: relative;
+    top: -6px;
+}
 
 
 
