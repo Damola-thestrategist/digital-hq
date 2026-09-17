@@ -1,3 +1,9 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+
 body {
     background-color: #0b1220;
     color: white;
@@ -5,24 +11,168 @@ body {
     margin:0;
 }
 
+
 .hero {
     min-height: 100vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%  8%;
+    background-image: url("background\ hero\ section.jpeg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-top {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    padding: 20px 8%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:0% 12%;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
-.hero img{
+.logo-icon{
+    max-width: 80px;
+
+}
+
+.brand area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+    
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-left: -230px;
+}
+
+.navigation{
+    display: flex;
+    gap:30px;
+    align-items: center;
+}
+
+.navigation a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navigation a :hover{
+    color:#147BFF
+}
+
+.connect-btn{
+    padding:10px 22px;
+    border:2px solid #149BFF;
+    border-radius: 25px;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+}
+.hero-content {
+    width:50%;
+    transform: translateY(20px);
+}
+
+.hero-visuals {
+    width:45%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    position:relative;
+    align-self: stretch;
+}
+
+.hero-visuals img {
     width: 500px;
-    height: 250x;
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 0px;
+    height:auto;
+    display:block;
+    
 }
 
+.hero-visuals .logo {
+    margin-left: 40px;
+}
+
+.logo {
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin-left: -100px; 
+    margin-bottom:-100px;
+    animation:logoEntrance 2.5s ease-out
+
+    
+}
+
+@keyframes logoEntrance {
+    from{
+        transform: translatex(150px) scale(1.15);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0) scale(1);
+        opacity:1;
+    }
+
+}
+.hero-visuals .signature{
+    width: 180px;
+}
+.signature {
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin-left: -150px; 
+    margin-bottom:-400px;
+    
+}
+
+.welcome {
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: welcome 2s;
+    animation-fill-mode: forwards;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 25px;
+    color:#38bdf8;
+
+    padding: 8px 16px;
+    border:1px solid #149BFF;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba( 20, 155, 255,0.45);
+
+}
+
+@keyframes welcome {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
 .intro {
     color:#38bdf8;
     font-size: 50px;
@@ -33,12 +183,14 @@ body {
 
 h1 {
      font-size: 60px;
-      margin: 10px 0;
+      margin-bottom: 10px;
+
 }
 
 h2 {
     font-size: 30px;
-    margin:10px 0;
+    margin-bottom: 25px;
+    white-space: nowrap;
 }
 
 .class intro p{
@@ -47,10 +199,23 @@ h2 {
 }
 
 .description {
-max-width: 650px;
+max-width: 550px;
 font-size: 18px;
 line-height: 1.6;
 margin-top: 10px;
+}
+
+.journey-nav-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #149BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.journey-nav-btn:hover {
+    background-color: #0d6efd;
 }
 
 #about{
@@ -92,7 +257,6 @@ p {
        border-radius: 15px;
        border: 1px solid rgba(0, 0, 0, 0.15);
        margin-top: -100px;
-       
 }
 
 .about-text p{
@@ -113,62 +277,590 @@ p {
     margin-bottom: 25px;
 }
 
-#skills{
-    padding: 80px 10%;    
-}
-.skills-group{
-    margin-top: 50px;
-}
-
-.skills-group h3{
-    font: size 34px;
-    font-weight: 200;
-    margin-bottom: 20px;
-
-    
+#skills {
+    padding: 80px 10%;
+    color:white;
+    background: #061426;
 }
 
-.skills-container{
+#skills h4 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+#skills .skills-intro {
+    font-size: 18px;
+    color: #8faed6;
+    margin-bottom: 50px;
+}
+
+.skills-group {
+    margin-bottom: 55px;
+}
+
+.skills-group-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.skills-group-heading h3 {
+    font-size: 26px;
+    margin: 0 0 6px;
+    color: white;
+}
+
+.skills-group-heading p {
+    margin: 0;
+    font-size: 16px;
+    color: #8faed6;
+}
+
+.skills-intro {
+    margin-top: 15px;
+    color: #b8c7e0;
+}
+
+.skills-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+}
+
+.skills-group {
+    margin-top: 20px;
+}
+
+.skills-group-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.skills-group-heading h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.skills-group-heading p {
+    margin: 5px 0 0;
+    color: #8fa8cc;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    display: grid;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+    background: #071a2e;
+    border: 1px solid #163653;
+    border-radius: 16px;
+    transition: 0.3s ease;
+    overflow-x: hidden;
+    grid-template-columns: repeat(4 1fr);
+}
+
+.skill-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0d2742;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.skill-info{
+    flex: 1;
+}
+.skill-info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.skill-info span {
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 7px;
+    color: #8faed6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #8faed6;
+    line-height: 1.5;
+}
+
+.skill-arrow {
+    font-size: 22px;
+    color: #8faed6;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: #2878c7;
+}
+
+.skill-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.learning-dot {
+    background: #ffbf00;
+}
+
+.skills-dot {
+    background: #00c896;
+}
+
+.exploring-dot {
+    background: #0066ff;
+}
+
+.skills-group:nth-child(1) .skill-icon {
+    border: 1px solid rgba(245, 180, 0, 0.35);
+}
+
+.skills-group:nth-child(2) .skill-icon {
+    border: 1px solid rgba(0, 201, 141, 0.35);
+}
+
+.skills-group:nth-child(3) .skill-icon {
+    border: 1px solid rgba(22, 119, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+
+    #skills {
+        padding: 60px 5%;
+    }
+
+    #skills h2 {
+        font-size: 34px;
+    }
+
+    #skills .skills-intro {
+        font-size: 16px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+
+    .skills-group-heading h3 {
+        font-size: 22px;
+    }
+
+    .skills-group-heading p {
+        font-size: 14px;
+    }
+}
+
+
+
+#journey{
+    background-image: url(background\ hero\ section.jpeg);
+    width: 100%;
+    background-size: contain;
+    
+}
+#journey p{
+    font-size:20px;
+}
+#journey h2{
+    font-size: 42px;
+    color:white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.journey-overall {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+   transition:transform 0.6s ease;
+}
+
+.journey-card {
+    flex: 0 0 75%;
+    min-height: 450px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.journey-card h3 {
+    margin-bottom: 20px;
+    color:white;
+}
+
+.journey-card p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color:white;
+    padding: 15px;
+    font-family: "montserrat",Arial;
+    text-shadow: 0 2px 6px rgba (0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+
+.journey-viewport {
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+}
+   
+.journey-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+
+    width: 64px;
+    height: 64px;
+
+    border: none;
+    border-radius: 50%;
+    background: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.journey-prev {
+    left: 25px;
+}
+
+.journey-next {
+    right: 25px;
+}
+
+.journey-btn span {
+    width: 14px;
+    height: 14px;
+    border-top: 2px solid #111;
+    border-right: 2px solid #111;
+    display: block;
+}
+
+.journey-prev span {
+    transform: rotate(-135deg);
+}
+
+.journey-next span {
+    transform: rotate(45deg);
+}
+
+.journey-01{
+    background-image: url(journey\ card-01\ bg.png);
+    background-size: contain;
+    background-position: center;
+    
+}
+.journey-02{
+    background-image:url(journey\ card-02\ backgroud.jpeg);
+    background-size: contain;
+    background-position: center;
+
+}
+.journey-03{
+    background-image:url(journey\ card-03\ background.jpeg);
+    background-size: contain;
+    background-position: center;
+}
+.journey-04{
+    background-image:url(journey\ card-04\ background.jpeg);
+    background-size: contain;
+    background-position: center;
     
 }
 
-.skills-group p{
-    display:inline-block;
-    background-color: #0b1220;
-    color: #eaecf1;
-    font-weight: 700;
-    padding: 12px 18px;
-    border-radius: 8px;
-    margin: 6px;
-    transition: 0.3 ease;
+.journey-05{
+    background-image:url(journey\ card-05\ background.jpeg);
+    background-size: contain;
+    background-position: cover;
+    
 }
+.journey-06{
+    background-image:url(journey\ card-06\ background.png);
+    background-size: contain;
+    background-position:center ;
 
-.skills-group p:hover{
-    position: relative;
-    top: -6px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
-
-.hero a {
-    display:inline-block;
-    background-color: #0066ff;
+#projects {
+    background: #020b18;
+    padding: 80px 5%;
     color: white;
-    font-weight: bold;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 10px;
+}
+
+#projects h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+#projects .projects-intro {
+    font-size: 18px;
+    color: #8faed6;
+    margin-bottom: 50px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+
+    background: #071a2e;
+    border: 1px solid #163653;
+    border-radius: 16px;
+
     transition: 0.3s ease;
 }
 
-.hero a:hover{
-    position: relative;
-    top: -6px;
+
+.project-content p {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #8faed6;
+}
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: #2878c7;
 }
 
+.project-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0d2742;
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-category {
+    display: block;
+    font-size: 10px;
+    color: #4da3ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+}
+
+.project-content h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+    color: white;
+}
+
+.project-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #8faed6;
+}
+
+.project-arrow {
+    font-size: 22px;
+    color: #8faed6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.project-tags span {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #0d2742;
+    border: 1px solid #163653;
+    color: #8faed6;
+    font-size: 12px;
+}
+
+
+.contact-section{
+    background: #000000;
+    color: white;
+    padding: 80px 8%;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    margin-top: 100px;
+    width: 100%;
+    
+}
+
+.contact-content {
+    max-width: 500px;
+    flex: 1;
+    min-width: none;
+}
+
+.contact-label {
+    color:#147bff;
+    font-size:14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.contact-section h2{
+    font-size: 30px;
+    line-height: 1.2;
+    margin:20px 0;
+}
+
+.contact-section h2 span{
+    color: #147bff;
+    display: block;
+}
+
+.contact-section p{
+    color:#d0d0d0;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width:600px
+}
+
+.contact-actions {
+    flex: 0 0 280px;
+}
+
+
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.contact-btn {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact-btn.primary {
+    background: #147BFF;
+    color: white;
+}
+
+.contact-btn.secondary {
+    border: 1px solid #147BFF;
+    color: white;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.social-links > span {
+    display: block;
+    color: #147BFF;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #147BFF;
+}
+ html{
+    scroll-behavior: smooth;
+ }
+
+
+ h1{
+    font-size:48px;
+ }
+
+h2{
+    font-size:32px;
+}
+h3{
+    font-size: 32px;
+}
+p{
+    font-size: 16px;
+}
+section {
+    padding: 80px 8%;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin:0 auto;
+}
 
 
 
