@@ -55,16 +55,18 @@ body {
     color: white;
     margin-left: -230px;
 }
-
+ .menu-toggle {
+    display: none;
+ }
 .navigation{
     display: flex;
     gap:30px;
     align-items: center;
+    border-radius: 10px;
 }
 
 .navigation a{
     color:white;
-    text-decoration:none;
     font-weight:bold;
 }
 
@@ -1010,8 +1012,7 @@ section {
         width: 100%;
         overflow-x: hidden;
     }
-
-
+    
     /* Header */
 
     .hero-top {
@@ -1028,7 +1029,10 @@ section {
         font-size: 17px;
         margin-left: 0;
     }
-
+   
+    .menu-toggle {
+        display: block;
+    }
     .navigation {
         gap: 12px;
     }
@@ -1389,6 +1393,12 @@ section {
         text-align: center;
         width: 100%;
     }
+
+}
+
+@media (max-width: 600px) {
+
+    /* Mobile changes go here */
 
 }
 
