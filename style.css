@@ -968,16 +968,16 @@ section {
     }
 
     .journey-btn {
-        width: 50px;
-        height: 50px;
+        width: 50%;
+        height: 50%;
     }
 
     .journey-prev {
-        left: 15px;
+        left: 15%;
     }
 
     .journey-next {
-        right: 15px;
+        right: 15%;
     }
 
 
@@ -1005,7 +1005,7 @@ section {
    MOBILE
    ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     html,
     body {
@@ -1016,25 +1016,34 @@ section {
     /* Header */
 
     .hero-top {
-        padding: 12px 5%;
+        width: 100%;
+        padding: 12px 20px;
         gap: 10px;
+        display: flex;
+        align-items: center;
     }
 
     .logo-icon {
         width: 45px;
         max-width: 45px;
+        flex-shrink: 0;
     }
 
     .brand {
         font-size: 17px;
-        margin-left: 0;
+        white-space: nowwrap;
+        flex-shrink: 0;
+        
     }
    
     .menu-toggle {
         display: block;
+        margin-left: auto;
+        flex-shrink: 0;
     }
+    
     .navigation {
-        gap: 12px;
+        display: none;
     }
 
     .navigation a {
@@ -1042,8 +1051,7 @@ section {
     }
 
     .connect-btn {
-        padding: 7px 12px;
-        font-size: 12px;
+        display: none;
     }
 
 
@@ -1393,12 +1401,6 @@ section {
         text-align: center;
         width: 100%;
     }
-
-}
-
-@media (max-width: 600px) {
-
-    /* Mobile changes go here */
 
 }
 
