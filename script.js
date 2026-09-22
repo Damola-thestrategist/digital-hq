@@ -89,3 +89,43 @@ previousButton.addEventListener("click", () => {
 nextButton.addEventListener("click", () => {
     showJourneyCard(currentCard + 1);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+
+    if (!menuToggle || !navigation) return;
+
+    // Open/close on hamburger click
+    menuToggle.addEventListener('click', function () {
+        navigation.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Close when a nav link is tapped (mobile UX expectation)
+    navigation.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navigation.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    // Close when tapping outside the menu
+    document.addEventListener('click', function (e) {
+        const isClickInsideNav = navigation.contains(e.target);
+        const isClickOnToggle = menuToggle.contains(e.target);
+
+        if (!isClickInsideNav && !isClickOnToggle && navigation.classList.contains('active')) {
+            navigation.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
+
+    // Close menu automatically if window is resized back to desktop
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+            navigation.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
+});s
